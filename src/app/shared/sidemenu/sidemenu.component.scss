@@ -1,0 +1,13 @@
+.sidemenu {
+    padding-top: 1px;
+    background-color: #212121;
+    color: wheat;
+    height: 100vh;
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    .active-link{
+        color: red;
+    }
+}
