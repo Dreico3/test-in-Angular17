@@ -1,1 +1,40 @@
 <p>control-flow works!5656</p>
+<section>
+    <section>
+        <h2>if: {{showContent()}}</h2>
+        <button (click)="toggleContent()">{{showContent()?'ocultar':'mostrar'}}</button>
+        @if(showContent()){
+        <h1>targeta oculta</h1>
+        }@else{
+        <h1>no se cambio¿?</h1>
+        }
+    </section>
+    <section>
+        <h2>swich: </h2>
+        @switch(grade()){
+            @case('a'){
+            <p>muy bien</p>}
+            @case('b'){
+            <p>bien</p>
+            }
+            @default{
+            <p>reprobado</p>
+            }
+        }
+    </section>
+    <section>
+        <h2>for: </h2>
+        @for(framework of frameworks();track $index){
+            <li>{{framework}}</li>
+        }
+
+        @for(framework of frameworks2();track $index){
+            <li>{{framework}}</li>
+        }@empty{
+            <p>empty se muestra cuando la lista no tiene ningun elemento para recorrer</p>
+        }
+    </section>
+    <section>
+        <h2></h2>
+    </section>
+</section>
