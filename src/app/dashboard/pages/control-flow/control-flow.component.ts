@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { TitleComponent } from '../../../shared/title/title.component'
+import { TitleComponent } from '@shared/title/title.component';
 
 type Grade = 'a' | 'b' | 'f'
 @Component({
