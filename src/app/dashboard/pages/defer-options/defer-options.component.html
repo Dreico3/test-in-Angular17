@@ -1,1 +1,58 @@
 <p>defer-options works!</p>
+<app-title title="defer triggres"></app-title>
+
+<section>
+    <h1>Interaciones</h1>
+    @defer(on interaction){
+        <app-heavy-loaders-fast color="red">
+            <span>on interaction</span>
+        </app-heavy-loaders-fast>
+    }@placeholder {
+        <p>cargando este trigger solo se habilita cuando le haces click</p>
+    }
+</section>
+
+<section>
+    <h1>Interaciones</h1>
+    <button #btnInteraction >click me</button>
+    @defer(on interaction(btnInteraction)){
+        <app-heavy-loaders-fast color="red">
+            <span>on interaction</span>
+        </app-heavy-loaders-fast>
+    }@placeholder {
+        <p>cargando este hace que se ejecute la interaccion con una accion espesifica en este caso el boton</p>
+    }
+</section>
+
+<section>
+    <h1>Interaciones</h1>
+    <button #btnInteraction >click me</button>
+    @defer(on hover(btnInteraction)){
+        <app-heavy-loaders-fast color="red">
+            <span>on interaction</span>
+        </app-heavy-loaders-fast>
+    }@placeholder {
+        <p>cargando este hace que se ejecute la interaccion con una accion espesifica en este caso el boton</p>
+    }
+</section>
+<section>
+    <h1>Interaciones</h1>
+    @defer(on immediate){
+        <app-heavy-loaders-fast color="red">
+            <span>on interaction</span>
+        </app-heavy-loaders-fast>
+    }@placeholder {
+        <p>cargando este hace que se cree imediatamente despues que se construya la app </p>
+    }
+</section>
+
+<section>
+    <h1>Interaciones</h1>
+    @defer(on timer(2000)){
+        <app-heavy-loaders-fast color="red">
+            <span>on interaction</span>
+        </app-heavy-loaders-fast>
+    }@placeholder {
+        <p>cargando este carga despues del tiempo dado </p>
+    }
+</section>
