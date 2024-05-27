@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   selector: 'app-heavy-loaders-slow',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: `<h1>hola mundo</h1>`,
+  template: `<h1>hola mundo</h1>`,
 })
 export class UserLoaderComponent {
 

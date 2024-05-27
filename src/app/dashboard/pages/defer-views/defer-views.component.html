@@ -1,1 +1,24 @@
-<p>defer-views works!</p>
+<app-title title="defer wiews / block"></app-title>
+<section>
+    @defer () {
+    <app-heavy-loaders-slow [color]="'red'"></app-heavy-loaders-slow>
+    <p>componente muy pesado</p>
+    }
+    @placeholder{
+    <p>Cargando ...</p>
+    }
+    @defer (on idle) {
+    <app-heavy-loaders-slow [color]="'blue'"></app-heavy-loaders-slow>
+    <p>componente muy pesado</p>
+    }
+    @placeholder{
+    <p>Cargando ...</p>
+    }
+    @defer (on viewport) {
+    <app-heavy-loaders-slow [color]="'grey'"></app-heavy-loaders-slow>
+    <p>componente muy pesado</p>
+    }
+    @placeholder{
+    <p>Cargando ...</p>
+    }
+</section>
