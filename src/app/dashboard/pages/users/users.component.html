@@ -1,1 +1,14 @@
-<p>users works!</p>
+<app-title title="listado de usuarios"></app-title>
+<ul>
+
+    @for (user of userService.users(); track user.id) {
+        <li>
+            <img height="30" [srcset]="user.avatar" [alt]="user.first_name">
+            <a [routerLink]="['/dashboard/use',user.id]">
+                {{user.first_name}}{{user.last_name}}
+            </a>
+        </li>
+    }@empty {
+        <h2>la informacion se esta cargando</h2>
+    }
+</ul>
